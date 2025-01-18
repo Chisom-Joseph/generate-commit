@@ -8,10 +8,9 @@
   "author": "Chisom Joseph Njoku",
   "license": "ISC",
   "dependencies": {
-    "generate-commit": "^1.0.1",
     "inquirer": "^8.2.6"
   },
-  "version": "1.0.1",
+  "version": "1.0.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Chisom-Joseph/generate-commit.git"

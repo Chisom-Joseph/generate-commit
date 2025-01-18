@@ -4,12 +4,6 @@
 
 ---
 
-## Overview
-
-Generate Commit is a command-line interface (CLI) tool designed to assist developers in generating Git commits with customizable timestamps. You can specify the commit date and time, or if you prefer, let the tool automatically generate a random timestamp for you. This tool is especially useful for backdating commits, such as when you need to align commit history with a specific project timeline.
-
----
-
 ## Features
 
 - **Backdate commits**: Allows you to specify a custom commit date and time.
@@ -29,11 +23,9 @@ You can install the `generate-commit` package globally via npm to use it across 
 npm install -g generate-commit
 ```
 
-# generate-commit
+---
 
 ## Usage
-
-### 1. Interactive Mode:
 
 Once installed, you can run the tool interactively. The tool will prompt you to input the commit date, time, and message. This mode is useful if you prefer to input commit details step-by-step.
 
@@ -43,20 +35,34 @@ To use it, simply run the following command in your terminal:
 commit
 ```
 
+or
+
+```bash
+npx generate-commit
+```
+
 When you run this command, the tool will prompt you to:
 
 - **Enter the commit date:** If no date is provided, it will default to today's date.
 - **Enter the commit time:** If no time is provided, the tool will generate a random time for you.
 - **Enter the commit message:** You will be prompted to enter a custom commit message.
 
-For example, the prompt might look like this:
+For example, the prompt will look like this:
 
 ```bash
-Enter commit date (YYYY-MM-DD): 2025-01-15
-Enter commit time (HH:MM): 15:30
-Enter commit message: Initial commit
+Enter the date (YYYY-MM-DD): 2025-01-15
+Enter the time (HH:MM:SS) [Leave blank for random]: 15:30:23
+Enter the message: Initial commit
 ```
 
 Enter commit date (YYYY-MM-DD): 2025-01-15 Enter commit time (HH:MM): 15:30 Enter commit message: Initial commit
 
 Once you are done you will get a commit command that you can now run to commit your changes
+
+```bash
+Here’s the Git command you can use to create the commit:
+
+GIT_AUTHOR_DATE="2025-01-15 15:30:23" GIT_COMMITTER_DATE="2025-01-15 15:30:23" git commit --amend -m "Initial commit"
+```
+
+You can now copy the command and use it to create you git commit
