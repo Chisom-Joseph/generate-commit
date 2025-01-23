@@ -50,7 +50,7 @@ Once installed, you can run the tool interactively. The tool will prompt you to 
 To use it, simply run the following command in your terminal:
 
 ```bash
-commit
+generate-commit
 ```
 
 or

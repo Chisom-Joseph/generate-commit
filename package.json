@@ -1,9 +1,9 @@
 {
   "name": "generate-commit",
   "description": "CLI tool to generate backdated Git commit commands",
-  "main": "commit.mjs",
+  "main": "generate-commit.mjs",
   "bin": {
-    "generate-commit": "commit.mjs"
+    "generate-commit": "generate-commit.mjs"
   },
   "author": "Chisom Joseph Njoku",
   "license": "ISC",
