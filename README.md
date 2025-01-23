@@ -15,6 +15,24 @@
 
 ---
 
+## Flags
+
+- `y`: Generate everything randomly (date, time, and message).
+- `-d "<date>"`: Specify the date (in YYYY-MM-DD format).
+- `-t "<time>"`: Specify the time (in HH:MM:SS format).
+- `-m "<message>"`: Specify the commit message.
+
+---
+
+## Behavior
+
+- If `-y` is used, it overrides everything and generates random values.
+- If specific flags like `-d`, `-t`, or -m are provided, they are used. Missing fields are filled with random values.
+- If no flags are used, the script enters an interactive prompt.
+- If no inputs are provided, it generates missing values randomly.
+
+---
+
 ## Installation
 
 You can install the `generate-commit` package globally via npm to use it across all your projects:
@@ -50,19 +68,25 @@ When you run this command, the tool will prompt you to:
 For example, the prompt will look like this:
 
 ```bash
-Enter the date (YYYY-MM-DD): 2025-01-15
+Enter the date (YYYY-MM-DD) [Leave blank for random]: 2025-01-15
 Enter the time (HH:MM:SS) [Leave blank for random]: 15:30:23
-Enter the message: Initial commit
+Enter the commit message [Leave blank for random]: Initial commit
 ```
 
 Enter commit date (YYYY-MM-DD): 2025-01-15 Enter commit time (HH:MM): 15:30 Enter commit message: Initial commit
 
-Once you are done you will get a commit command that you can now run to commit your changes
+Once you are done you will get a commit command that you can now run to commit your changes, you can press `ENTER` to copy to clipboard or `ESC` to cancle
 
 ```bash
 Here’s the Git command you can use to create the commit:
 
 GIT_AUTHOR_DATE="2025-01-15 15:30:23" GIT_COMMITTER_DATE="2025-01-15 15:30:23" git commit --amend -m "Initial commit"
+
+Press Enter to copy the command to your clipboard, or Press Esc to cancel...
 ```
 
-You can now copy the command and use it to create you git commit
+You can now copy the command and use it to create your git commit
+
+Built with ❤ by: [Chisom Joseph Njoku](https://github.com/Chisom-Joseph), follow me on GitHub
+
+Feel free to contribute on [GitHub](https://github.com/Chisom-Joseph/generate-commit.git)

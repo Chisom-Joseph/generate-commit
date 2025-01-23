@@ -1,16 +1,19 @@
 {
   "name": "generate-commit",
   "description": "CLI tool to generate backdated Git commit commands",
-  "main": "commit.js",
+  "main": "commit.mjs",
   "bin": {
-    "commit": "commit.js"
+    "generate-commit": "commit.mjs"
   },
   "author": "Chisom Joseph Njoku",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^8.2.6"
+    "clipboardy": "^4.0.0",
+    "commander": "^13.1.0",
+    "inquirer": "^8.2.6",
+    "terminal-kit": "^3.1.2"
   },
-  "version": "1.0.3",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Chisom-Joseph/generate-commit.git"
@@ -18,7 +21,13 @@
   "keywords": [
     "git",
     "github",
+    "gitlab",
+    "bitbucket",
     "commit",
+    "commiter",
+    "committer",
+    "gen-commit",
+    "commit-gen",
     "backdate",
     "back-date",
     "change",
@@ -40,5 +49,6 @@
   "bugs": {
     "url": "https://github.com/Chisom-Joseph/generate-commit/issues"
   },
+  "type": "module",
   "homepage": "https://github.com/Chisom-Joseph/generate-commit#readme"
 }
