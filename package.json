@@ -13,7 +13,7 @@
     "inquirer": "^8.2.6",
     "terminal-kit": "^3.1.2"
   },
-  "version": "2.0.0",
+  "version": "2.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Chisom-Joseph/generate-commit.git"
